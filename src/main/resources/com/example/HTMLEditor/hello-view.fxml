@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.web.*?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.HTMLEditor.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <HBox spacing="10">
+        <Button fx:id="loadButton" onAction="#onOpen" text="Загрузить файл" />
+        <Button onAction="#onSaveHtml" text="Сохранить HTML" />
+    </HBox>
+    <Label text="Отображение HTML:" />
+
+    <HBox spacing="10">
+        <HTMLEditor fx:id="htmlEditor" onKeyReleased="#onChange" prefHeight="270.0" prefWidth="661.0" />
+    </HBox>
+    <Label text="Область для отображения текста" />
+
+    <HBox spacing="10">
+        <TextArea fx:id="textArea" prefHeight="185.0" prefWidth="662.0" wrapText="true" />
+    </HBox>
+    <Label text="WebView:" />
+
+    <HBox spacing="10">
+        <WebView fx:id="webView" prefHeight="200.0" prefWidth="663.0" />
+    </HBox>
+
+    <Label fx:id="statusLabel" text="Добро пожаловать!" />
+</VBox>
